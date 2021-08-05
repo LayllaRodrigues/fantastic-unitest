@@ -38,5 +38,15 @@ describe AvengersHeadQuarter do
         expect(hq.list).to start_with ('Thor')
     end
 
+    it 'Ironman deve ser o ultimo da lista' do
+        hq = AvengersHeadQuarter.new
+
+        hq.put('Thor')
+        hq.put('Hulk')
+        hq.put('Spiderman')
+        hq.put('Ironman')
+
+        expect(hq.list).to end_with ('ironman')
+    end
        
 end
