@@ -44,9 +44,16 @@ describe AvengersHeadQuarter do
         hq.put('Thor')
         hq.put('Hulk')
         hq.put('Spiderman')
-        hq.put('Ironman')
+        hq.put('Laylla')
 
-        expect(hq.list).to end_with ('ironman')
+        expect(hq.list).to end_with('Laylla')
+    end
+
+    it 'deve conter o sobrenome' do
+        avenger = 'Peter Parker'
+
+        expect(avenger).to match(/Parker/)
+        expect(avenger).not_to match(/Laylla/)
     end
        
 end
